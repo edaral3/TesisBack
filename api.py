@@ -10,8 +10,11 @@ CORS(app)
 
 app.config["DEBUG"] = True
 
-
 @app.route('/', methods=['POST'])
+def getPrediction():
+    return "ok"
+
+@app.route('/check', methods=['POST'])
 def getPrediction():
     decodeBase64(flask.request.json["base64"])
     data = getPredictionCNN()
