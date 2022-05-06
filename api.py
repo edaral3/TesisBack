@@ -11,7 +11,7 @@ CORS(app)
 app.config["DEBUG"] = True
 
 @app.route('/', methods=['POST'])
-def check():
+def che():
     return "ok"
 
 @app.route('/check', methods=['POST'])
@@ -21,6 +21,5 @@ def getPrediction():
     data = [data[0],data[1], data[2]]
     return json.dumps(str(data))
 
-app.run(host='0.0.0.0', port=80)
-app.run()
+app.run(debug=True, use_reloader=False, port=80)
 
