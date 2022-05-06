@@ -11,7 +11,7 @@ CORS(app)
 app.config["DEBUG"] = True
 
 @app.route('/', methods=['POST'])
-def getPrediction():
+def check():
     return "ok"
 
 @app.route('/check', methods=['POST'])
