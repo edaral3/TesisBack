@@ -23,5 +23,4 @@ def getPrediction():
 
 app.run(debug=True, use_reloader=False)
 app.run(host='0.0.0.0', port=80)
-app.run()
 
