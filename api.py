@@ -21,5 +21,5 @@ def getPrediction():
     data = [data[0],data[1], data[2]]
     return json.dumps(str(data))
 
-app.run(debug=True, use_reloader=False, port=5000)
+app.run(debug=True, use_reloader=False, port=8080)
 
