@@ -1,5 +1,5 @@
 FROM python3.10:latest
 WORKDIR /app
-COPY api.py ./api.py
+COPY . .
 EXPOSE 8080
-ENTRYPOINT ["python", "run.py"]
+CMD ["python", "run.py"]
