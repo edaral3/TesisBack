@@ -1,5 +1,6 @@
 import flask
 from flask_cors import CORS
+from waitress import serve
 from transformData import decodeBase64
 from cnn import getPredictionCNN 
 import json
@@ -20,6 +21,8 @@ def getPrediction():
     data = getPredictionCNN()
     data = [data[0],data[1], data[2]]
     return json.dumps(str(data))
-
-app.run(debug=True, use_reloader=False, port=8080)
+    
+if __name__ == '__main__':
+    #app.run(host='0.0.0.0', port=80) 
+    serve(app, host='0.0.0.0', port=80)
 
